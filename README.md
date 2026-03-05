@@ -112,13 +112,6 @@ python3 unlock.py
 
 ---
 
-## 🎥 Project Demonstration
-
-Download and watch the demo video here:
-
-👉 [Click here to watch the demo](./video.mp4)
-
----
 
 ## 🙏 Thank You
 
