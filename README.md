@@ -1,78 +1,76 @@
-🔐 AI-Powered Smart Door Lock System (Raspberry Pi)
-🚀 Overview
+# 🔐 AI-Powered Smart Door Lock System (Raspberry Pi)
 
-An intelligent IoT-based door security system that integrates Face Recognition + OTP Verification to provide secure, multi-factor authentication for physical access control.
+An intelligent IoT-based security system that combines **Face Recognition + OTP Verification** to provide secure multi-factor authentication for physical access control.
 
-This project combines Artificial Intelligence, Embedded Systems, and IoT to create a real-time smart locking mechanism using Raspberry Pi.
+---
 
-🎯 Problem Statement
+## 🚀 Overview
 
-Traditional locks can be easily bypassed or keys can be duplicated. Even smart locks with single authentication methods (PIN or face recognition) are vulnerable to spoofing.
+This project enhances traditional door locking systems by integrating Artificial Intelligence and IoT.  
+It uses real-time face recognition along with OTP-based second-factor authentication to prevent unauthorized access.
 
-This system solves the problem by implementing:
+---
 
-✅ Face Recognition (AI-based identity verification)
+## 🎯 Problem Statement
 
-✅ OTP-based Second Factor Authentication
+Traditional locks can be bypassed or keys duplicated.  
+Even smart locks with a single authentication method are vulnerable to spoofing.
 
-✅ Hardware-level Lock Control via Relay & Solenoid
+This system improves security by implementing:
 
-🧠 System Architecture
+- ✅ AI-Based Face Recognition  
+- ✅ OTP-Based Second Factor Authentication  
+- ✅ Hardware-Level Relay Controlled Lock  
 
-User registers face and mobile number.
+---
 
-System stores face dataset locally.
+## 🧠 System Architecture
 
-During authentication:
+1. User registers face and mobile number  
+2. Face dataset is stored locally  
+3. During authentication:
+   - Face detected using Haar Cascade  
+   - Face recognized using LBPH algorithm  
+   - If matched → OTP sent  
+   - If OTP verified → GPIO triggers relay  
+   - Solenoid lock unlocks  
 
-Face is detected using Haar Cascade.
+---
 
-Face is recognized using LBPH algorithm.
+## 🛠️ Technologies Used
 
-If matched → OTP is sent via Twilio.
+### 💻 Software
+- Python  
+- OpenCV  
+- Haar Cascade Classifier  
+- LBPH Face Recognizer  
+- Twilio API (OTP Service)  
+- Raspberry Pi OS  
 
-If OTP verified → GPIO triggers relay.
+### 🔌 Hardware
+- Raspberry Pi  
+- USB Camera  
+- Relay Module  
+- Solenoid Lock  
+- 18650 Battery Pack  
 
-Solenoid lock unlocks the door.
+---
 
-🛠️ Technologies Used
-💻 Software
+## 🔒 Security Layers
 
-Python
+| Layer | Mechanism |
+|-------|------------|
+| 1️⃣ | Face Recognition |
+| 2️⃣ | OTP Verification |
+| 3️⃣ | Hardware Relay Activation |
 
-OpenCV
+Multi-layer authentication increases real-world security reliability.
 
-Haar Cascade Classifier
+---
 
-LBPH Face Recognizer
+## 📂 Project Structure
 
-Twilio API (OTP Service)
-
-Linux (Raspberry Pi OS)
-
-🔌 Hardware
-
-Raspberry Pi
-
-USB Camera
-
-Relay Module
-
-Solenoid Lock
-
-18650 Battery Pack
-
-Power Bank
-
-🔒 Security Layers
-Layer	Mechanism
-1️⃣	Face Recognition
-2️⃣	OTP Verification
-3️⃣	Hardware Relay Activation
-
-This ensures multi-factor authentication, increasing real-world security reliability.
-
-📂 Project Structure
+```bash
 AI-Door-Lock/
 │
 ├── register_face.py
@@ -81,32 +79,32 @@ AI-Door-Lock/
 │   └── <mobile_number>/
 │       ├── 1.jpg
 │       ├── 2.jpg
-│       ├── ...
 │       └── number.txt
-└── haarcascade_frontalface_default.xml
-⚙️ How It Works
-🔹 Step 1: Face Registration
+│
+├── haarcascade_frontalface_default.xml
+└── README.md
+```
 
-Run:
+---
 
+## ⚙️ How to Run
+
+### Step 1: Install Dependencies
+```bash
+pip install opencv-python
+```
+
+### Step 2: Register Face
+```bash
 python3 register_face.py
+```
 
-Captures 20 grayscale face images
-
-Stores mobile number
-
-Creates dataset folder
-
-🔹 Step 2: Unlock Process
-
-Run:
-
+### Step 3: Unlock System
+```bash
 python3 unlock.py
+```
 
-Trains LBPH model
+## 👩‍💻 Author
 
-Detects and recognizes face
-
-Sends OTP
-
-Unlocks solenoid upon verification
+Hansi  
+AI & IoT Enthusiast  
