@@ -104,7 +104,14 @@ python3 register_face.py
 python3 unlock.py
 ```
 
-## 👩‍💻 Author
+---
 
-Hansi  
-AI & IoT Enthusiast  
+## 📸 Project Model
+
+![AI Door Lock Model](model%20image.jpg)
+
+---
+
+## 🙏 Thank You
+
+Thank you for exploring this project.  
