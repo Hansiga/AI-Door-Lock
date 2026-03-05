@@ -111,11 +111,12 @@ python3 unlock.py
 ![AI Door Lock Model](model%20image.jpg)
 
 ---
+
 ## 🎥 Project Demonstration
 
-Click the link below to watch the project demo video:
+Download and watch the demo video here:
 
-[▶ Watch Demo Video](video.mp4)
+👉 [Click here to watch the demo](./video.mp4)
 
 ---
 
